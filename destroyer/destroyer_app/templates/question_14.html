@@ -1,0 +1,12 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>Q14</h1><h2>평소 멀티탭을 사용하시나요?</h2>
+            <button class="btn"onclick="location.href='answer?num=14&result=0'">네, 전원은 끄지 않음</button>
+            <button class="btn"onclick="location.href='answer?num=14&result=1'">네, 미사용시 전원 끔</button>
+            <button class="btn"onclick="location.href='answer?num=14&result=2'">아니오</button>
+    </div>
+{% endblock %}

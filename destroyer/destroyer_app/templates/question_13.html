@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>Q13</h1><h2 style="text-align: center;">일회용 봉지(ex.편의점)<br/> 지금껏 얼마나 사용하셨나요?</h2>
+            <button class="btn"onclick="location.href='answer?num=13&result=0'">사용한 적 없음</button>
+            <button class="btn"onclick="location.href='answer?num=13&result=1'">100개 이하</button>
+            <button class="btn"onclick="location.href='answer?num=13&result=2'">200개 이하</button>
+            <button class="btn"onclick="location.href='answer?num=13&result=3'">그 이상</button>
+    </div>
+{% endblock %}

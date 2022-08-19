@@ -1,0 +1,19 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/question.css'%}" />
+<div class="question big-content-box">
+  <h1>Q9</h1>
+  <h2>하루에 노트북을 몇시간 사용하나요?</h2>
+  <h2>( x 시간)</h2>
+  <form class="Qbox" action="{% url 'answer' %}">
+    <input name="num" value="9" hidden />
+    <input
+      class="inputQ inputBox"
+      type="number"
+      name="result"
+      placeholder="ex) 10"
+    />
+    <input class="submitQ btn submitBtn" type="submit" />
+  </form>
+</div>
+{% endblock %}

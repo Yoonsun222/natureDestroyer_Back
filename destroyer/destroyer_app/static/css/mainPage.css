@@ -1,0 +1,28 @@
+@keyframes fade-in {
+    from {
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+}
+.mainPage.content-box {
+    text-align: center;
+    gap: 13px;
+    position:absolute;
+    top: 50%;
+}
+
+.mainPage h1 {
+    white-space: nowrap;
+    animation-name: fade-in;
+    animation-duration: 3s;
+}
+.license{
+    text-decoration: none;
+    font-size: 15px;
+}
+
+.mainPage a{
+    float:right;
+}

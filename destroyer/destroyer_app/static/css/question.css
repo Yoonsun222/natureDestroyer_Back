@@ -1,0 +1,32 @@
+body::before{
+    filter:blur(5px);
+}
+
+.question .btn {
+    width: 80%;
+    height: 50px;
+    font-size:larger;
+    font-weight: bold;
+    color: rgba(255,255,255,1);
+}
+.question .submitBtn{
+    max-width: 100px;
+}
+.question .pretty{
+    font-family: 'PPL';
+}
+
+.question .Qbox{
+    display: flex;
+    flex-direction: row;
+    height: 50px;
+    gap: -20px;
+    padding-top: 30px;
+    padding-left: 50px;
+}
+.question .inputQ{
+    flex: 4;
+}
+.question .submitQ{
+    flex: 1;
+}

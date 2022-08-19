@@ -1,0 +1,12 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>Q16</h1><h2>텀블러를 얼마나 사용하시나요?</h2>
+            <button class="btn"onclick="location.href='answer?num=16&result=0'">하루 1회 이상</button>
+            <button class="btn"onclick="location.href='answer?num=16&result=1'">1주일에 3~4회 정도</button>
+            <button class="btn"onclick="location.href='answer?num=16&result=2'">대체로 사용 안함</button>
+    </div>
+{% endblock %}

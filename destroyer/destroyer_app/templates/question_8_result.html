@@ -1,0 +1,18 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/question.css'%}" />
+<div class="question big-content-box">
+  <h1>당신..</h1>
+  <h2><span style="color: green"> {{result}}</span></h2>
+  <h2>의 탄소를 배출하고 있습니다.</h2>
+  <p style="color: gray">
+    * 메일 한 통을 지우면, 약 4g의 온실가스를 막을 수 있습니다.<br />
+    세계 23억 명 인구가 50개의 읽지 않은 메일을 비우면 데이터 862만5000GB가
+    삭제되고, 이를 환산하면 1시간 동안 27억개의 전구를 끄는 것과 같은 에너지
+    절약 효과를 얻을 수 있습니다. 출처 : 경기신문 (https://www.kgnews.co.kr)
+  </p>
+  <button class="btn submitBtn" onclick="location.href='question?num=9'">
+    다음
+  </button>
+</div>
+{% endblock %}

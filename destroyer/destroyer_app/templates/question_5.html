@@ -1,0 +1,23 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/question.css'%}" />
+<div class="question big-content-box">
+  <h1>Q5</h1>
+  <h2>일주일 중 식사를 남기는 횟수는?</h2>
+  <button class="btn" onclick="location.href='answer?num=5&result=0'">
+    0번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=5&result=1'">
+    1~2번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=5&result=2'">
+    3~4번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=5&result=3'">
+    5~6번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=5&result=4'">
+    그 이상
+  </button>
+</div>
+{% endblock %}

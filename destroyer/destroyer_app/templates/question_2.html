@@ -1,0 +1,24 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/question.css'%}" />
+<div class="question big-content-box">
+  <h1>Q2</h1>
+  <h2>채식 vs 육식</h2>
+  <p class="pretty">일주일 간, 육식대신 채식을 택하는 경우는?</p>
+  <button class="btn" onclick="location.href='answer?num=2&result=0'">
+    0번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=2&result=1'">
+    1~2번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=2&result=2'">
+    3~4번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=2&result=3'">
+    5~6번
+  </button>
+  <button class="btn" onclick="location.href='answer?num=2&result=4'">
+    그 이상
+  </button>
+</div>
+{% endblock %}

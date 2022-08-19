@@ -1,0 +1,20 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/ranking.css'%}" />
+<div class="ranking big-content-box">
+  <h1>실시간 순위</h1>
+  <h5>가장 친 환경적인 학교 순으로 나열합니다.</h5>
+  <div class="ranking-flex">
+    <!-- 내용물은 sample입니다-->
+    {% for ranking in rank %}
+    <div class="ranking-item">
+      <h1>{{forloop.counter}}.</h1>
+      <span class="univ">{{ranking.school}} </span
+      ><span class="extra">
+        평균 <span class="tree">{{ranking.score__avg}}</span> 그루 만큼의 탄소를
+        배출합니다</span
+      >
+    </div>
+    {% endfor %} {% endblock %}
+  </div>
+</div>

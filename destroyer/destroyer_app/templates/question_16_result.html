@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>당신은</h1>
+            <h2 style="font-size: 18px;"> {{result}}</h2>
+            <p style="color:gray;">대체적으로 우리가 사용하는 텀블러는 스테인레스 텀블러이므로, 최소 220회 이상 사용해야 친환경적인 효과를 낼 수 있다. 또한, 텀블러를 사용하는데 권장하는 기간은 2~3년이므로, 약 3~4일에 1번씩 사용해야 한다.</p>
+            <button class="btn submitBtn" onclick="location.href='result'">결과 확인</button>
+            
+    </div>
+{% endblock %}

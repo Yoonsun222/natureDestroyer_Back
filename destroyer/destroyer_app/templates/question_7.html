@@ -1,0 +1,13 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>Q7</h1><h2>다음 중 가장 많이 사용하는 것은?</h2>
+            <button class="btn"onclick="location.href='answer?num=7&result=100년'">캔</button>
+            <button class="btn"onclick="location.href='answer?num=7&result=500년'">플라스틱</button>
+            <button class="btn"onclick="location.href='answer?num=7&result=20년'">나무 젓가락</button>
+            <button class="btn"onclick="location.href='answer?num=7&result=20년'">일회용 컵</button>
+    </div>
+{% endblock %}

@@ -1,0 +1,15 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/question.css'%}" />
+<div class="question big-content-box">
+  <h1>당신은</h1>
+  <h2 style="font-size: 18px">{{result}}</h2>
+  <p style="color: gray">
+    플라스틱 텀블러는 최소 17회, 세라믹 재질은 최소 39회 사용하면 일회용 컵을
+    사용하는 것보다 친환경적인 효과를 낼 수 있다.
+  </p>
+  <button class="btn submitBtn" onclick="location.href='result'">
+    결과 확인
+  </button>
+</div>
+{% endblock %}

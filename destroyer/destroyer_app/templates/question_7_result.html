@@ -1,0 +1,12 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>당신이</h1>
+            <h2>고른 물건은, <span style="color:green" > {{result}}</span> 이상이</h2>
+            <h2>지나야 분해됩니다.</h2>
+            <button class="btn submitBtn" onclick="location.href='question?num=8'">다음</button>
+    </div>
+{% endblock %}

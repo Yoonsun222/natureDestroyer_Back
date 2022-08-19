@@ -1,0 +1,28 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/profile.css'%}" />
+<div class="profile big-content-box">
+  <form action="{% url 'createuser' %}" method="POST">
+    <h1>학교명</h1>
+    <input
+      name="school"
+      type="school"
+      placeholder="ex)인천대학교"
+      class="inputBox"
+    />
+    <h1>닉네임</h1>
+    <input
+      name="nickname"
+      type="nickname"
+      placeholder="ex)인천대_환경지킴이"
+      class="inputBox"
+    />
+    <input
+      class="btn submitBtn"
+      type="submit"
+      onclick="location.href='/question?num=1'"
+      value="→"
+    />
+  </form>
+</div>
+{% endblock %}

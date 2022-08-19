@@ -1,0 +1,14 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>당신의</h1>
+            <h2>당신의 채식은 일주일간</h2>
+            <h2>탄소 배출량 약<span style="color:green" >{{result}}</span> </h2>
+            <h2>을 줄입니다</h2>
+            <p style="color: gray;"> * 소나무 한그루의 연간 흡수량은 6.6kg입니다. </p>
+            <button class="btn submitBtn" onclick="location.href='question?num=3'">다음</button>
+    </div>
+{% endblock %}

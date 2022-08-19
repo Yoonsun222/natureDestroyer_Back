@@ -1,0 +1,12 @@
+{% include 'base.html' %}
+{% load static %}
+{% block 'content' %}
+    
+    <link rel="stylesheet" href="{%static 'css/question.css'%}">
+    <div class="question big-content-box" >
+            <h1>Q15</h1><h2>일회용 컵은 얼마나 사용하시나요?</h2>
+            <button class="btn"onclick="location.href='answer?num=15&result=0'">1주일에 6~7회</button>
+            <button class="btn"onclick="location.href='answer?num=15&result=1'">1달에 1~2회 </button>
+            <button class="btn"onclick="location.href='answer?num=15&result=2'">더 적게 사용</button>
+    </div>
+{% endblock %}

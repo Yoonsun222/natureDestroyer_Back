@@ -1,0 +1,18 @@
+{% include 'base.html' %} {% load static %} {% block 'content' %}
+
+<link rel="stylesheet" href="{%static 'css/question.css'%}" />
+<div class="question big-content-box">
+  <h1>Q8</h1>
+  <h2>현재 몇통의 이메일이 보관되어 있나요?</h2>
+  <form class="Qbox" action="{% url 'answer' %}">
+    <input name="num" value="8" hidden />
+    <input
+      class="inputQ inputBox"
+      type="number"
+      name="result"
+      placeholder="ex) 15"
+    />
+    <input class="submitQ btn submitBtn" type="submit" />
+  </form>
+</div>
+{% endblock %}
