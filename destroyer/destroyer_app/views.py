@@ -1,7 +1,11 @@
+import random
 from django.shortcuts import render
 from .models import User, Ranking
 from django.views.decorators.csrf import csrf_exempt
 from django.db.models import Sum, Count, Avg
+from bs4 import BeautifulSoup
+import requests
+
 # Create your views here.
 
 cal = 0
@@ -46,18 +50,51 @@ def usersave():
         user.school = user_school
         user.save()
 
+def crawling():     
+    url = "http://www.yes24.com/24/Category/Display/001001022003002"
+    response = requests.get(url)
+    soup = BeautifulSoup(response.text, 'html.parser')
+    answer = {}
+    # 도서명 크롤링
+    
+    total_books = soup.select('span.imgBdr > a > img') 
+    images = soup.select('span.imgBdr > a > img')
+    base_link = "https://www.yes24.com"
+    links = soup.select('span.imgBdr > a')
+    
+    num1 = random.randrange(0,len(total_books))
+    if len(total_books) % 2:
+        num2 = len(total_books)-1 - num1
+    else:
+        num2 = len(total_books)-num1-2
+    
+    answer[total_books[num1]['alt']] = {images[num1]['src'] : base_link + links[num1]['href']}
+    answer[total_books[num2]['alt']] = {images[num2]['src'] : base_link + links[num2]['href']}
+
+    return answer
+
+
+
 def result( request ):
     usersave()
     global cal
     tree_num = int(cal*52//6.6)
-    if tree_num > 600:
+    if tree_num > 3500:
         result = '공기도 아까운 쓰레기 입니다.'
+        img= 1
+    elif tree_num > 2620:
+        result = '재활용가능한 쓰레기 입니다.'
+        img = 2
+    elif tree_num > 1650:
+        result = '재활용 잘된 쓰레기 입니다.'
+        img = 3
     else:
-        result = '공기가 아깝지 않은 멋쟁이 지구 지킴이 입니다.'
+        result = '공기가 아깝지 않은 멋쟁이 지구 수호천사 입니다.'
+        img = 4
     tree = '🌲' * tree_num
-    
-
-    return render( request, 'result.html', {'tree': tree, 'cal':cal, 'result': result })
+    book_reco = crawling()
+    return_dic = {'tree': tree, 'cal':cal, 'result': result, 'img':img, 'book_reco': book_reco }
+    return render( request, 'result.html', return_dic )
 
 
 def ranking( request ):
