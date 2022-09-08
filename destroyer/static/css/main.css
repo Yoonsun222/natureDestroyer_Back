@@ -1,0 +1,159 @@
+@font-face {
+  font-family: "PB";
+  src: url("../fonts/PyeongChangPeace-Bold.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PL";
+  src: url("../fonts/PyeongChangPeace-Light.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "P";
+  src: url("../fonts/PyeongChang-Bold.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "PPL";
+  src: url("../fonts/PyeongChang-Regular.ttf") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+}
+
+html {
+  padding: 8%;
+  height: 100%;
+  background: linear-gradient(#e2f2c9 19%, white);
+}
+body::before {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url("../images/warming.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: top;
+  filter: brightness(0.8);
+  z-index: -1;
+  content: "";
+}
+body {
+  margin: 0;
+  height: 100vh;
+  opacity: 0.8;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+p,
+a,
+h1,
+h2,
+h3,
+h4,
+h5,
+input {
+  color: #2d1f30;
+  font-family: "P";
+  transform: skew(-0.1deg);
+  margin: 0;
+}
+h1 {
+  font-family: "PB";
+  font-size: 33px;
+  padding: 1%;
+}
+p {
+  font-size: 16px;
+}
+
+.content-box {
+  max-width: 100%;
+  backdrop-filter: blur(5px);
+  padding: 6%;
+  background-color: rgba(255, 255, 255, 0.85);
+  border-radius: 50px;
+  box-shadow: 25px 25px 68px 0px #95a679, inset -3px -3px 16px 0px #95a679,
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: center;
+}
+.big-content-box {
+  width: 354px;
+  height: 500px;
+  max-width: 100%;
+  backdrop-filter: blur(5px);
+  padding: 60px;
+  background-color: rgba(255, 255, 255, 0.97);
+  border-radius: 50px;
+  box-shadow: 25px 25px 68px 0px #95a679, inset -3px -3px 16px 0px #95a679,
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+
+  display: flex;
+  flex-direction: column;
+  gap: 19px;
+  align-items: center;
+}
+
+.btn {
+  border: 0;
+  outline: 0;
+  width: 150px;
+  height: 62px;
+  border: 0px none rgba(100, 100, 100, 0);
+  border-radius: 56px;
+  background-color: rgba(149, 166, 121, 0.5);
+  box-shadow: inset 12px 12px 24px 0px rgba(149, 166, 121, 1),
+    inset -16px -16px 16px 0px rgba(149, 166, 121, 1),
+    15px 15px 16px 0px rgba(149, 166, 121, 0.5);
+  cursor: pointer;
+}
+.btn:active {
+  opacity: 0.5;
+}
+.submitBtn {
+  font-family: "P";
+  font-size: 25px;
+  margin-top: 20px;
+
+  border: 0;
+  background-color: rgba(166, 124, 73, 0.5);
+  box-shadow: inset 12px 12px 24px 0px rgba(166, 124, 73, 1),
+    inset -16px -16px 16px 0px rgba(166, 124, 73, 1),
+    15px 15px 16px 0px rgba(166, 124, 73, 0.5);
+}
+.inputBox {
+  max-width: 80vw;
+  position: relative;
+  width: 100%;
+  border: none;
+  outline: none;
+  padding: 10px 20px;
+  margin: -10px -20px;
+  border-radius: 30px;
+
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: 0.85em;
+  background-color: rgba(149, 166, 121, 1);
+  box-shadow: 5px 5px 7px rgba(255, 255, 255, 0.5),
+    inset 2px 2px 5px rgba(255, 255, 255, 0.35),
+    inset -3px -3px 5px rgba(255, 255, 255, 0.25);
+}
+
+.copyright {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  display: flex;
+}

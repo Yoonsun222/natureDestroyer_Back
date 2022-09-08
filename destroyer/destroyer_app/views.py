@@ -162,8 +162,8 @@ def answer( request ):
         if result >= 27:
             result = '멋쟁이 환경 지킴이'
         else:
+            cal += abs(result - 27) * 1.2
             result = '쓰레기'
-            cal += 1.2
         return render( request, 'question_'+str(num)+'_result.html', {'result': result} )
     
     elif num ==5:

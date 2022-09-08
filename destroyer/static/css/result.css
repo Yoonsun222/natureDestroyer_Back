@@ -1,0 +1,42 @@
+.result.big-content-box {
+  height: auto;
+  width: 80%;
+}
+.result .mainText {
+  font-size: 25px;
+}
+.result .resultImage {
+  max-width: 200px;
+}
+
+.result .submitBtn h5 {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.result .treeResult {
+  max-width: 300px;
+}
+
+.result .recoBox {
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  width: 100%;
+  justify-content: center;
+  gap: 20px;
+}
+
+.result .recoitem {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+  align-items: center;
+}
+.result .recoItem h3 {
+  font-size: 22px;
+  text-align: center;
+}
+
+.result .recoItem img {
+  width: 200px;
+}
