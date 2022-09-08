@@ -268,7 +268,7 @@ def answer( request ):
             result = "환경파괴범입니다. 환경파괴범이 바로 당신입니다."
         return render( request, 'question_'+str(num)+'_result.html', {'result': result })
 
-    elif num>=1 and num<=16:
+    elif num >= 1 and num<=16:
         return render( request, 'question_'+str(num)+'_result.html', {'result': result} )
     else:
         return render( request, '404.html',{'num':num} )
